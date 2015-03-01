@@ -1,0 +1,83 @@
+\documentclass[a4paper]{recipe}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{verbatimbox}
+\usepackage[top=1.2in, bottom=1.25in, left=1.5in, right=1.5in]{geometry}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\usepackage{libertine}
+\usepackage{enumitem}
+\setlist{nosep}
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+
+\newcommand*\openquote{\makebox(25,-22){\scalebox{5}{``}}}
+\newcommand*\closequote{\makebox(25,-22){\scalebox{5}{''}}}
+\colorlet{shadecolor}{Azure}
+
+\makeatletter
+\newif\if@right
+\def\shadequote{\@righttrue\shadequote@i}
+\def\shadequote@i{\begin{snugshade}\begin{quote}\openquote}
+\def\endshadequote{%
+  \if@right\hfill\fi\closequote\end{quote}\end{snugshade}}
+\@namedef{shadequote*}{\@rightfalse\shadequote@i}
+\@namedef{endshadequote*}{\endshadequote}
+\makeatother
+
+\addto\captionsenglish{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Index}%
+}
+
+\makeatletter
+\def\app@exe{\immediate\write18}
+\def\inputAllFiles#1{%
+  \app@exe{ls #1/*.tex | sort | xargs cat > \jobname.tmp}%
+  \InputIfFileExists{\jobname.tmp}{}
+  \AtEndDocument{\app@exe{rm -f \jobname.tmp}}}
+\makeatother
+
+\newcommand{\bsi}[2]{%
+  \fontencoding{T1}\fontfamily{pbs}\fontseries{xl}\fontshape{n}%
+  \fontsize{#1}{#2}\selectfont}
+
+\renewcommand{\inghead}{\textbf{Ingredients}:\ }
+\renewcommand{\rechead}{\centering\bsi{24pt}{30pt}}
+
+\makeatletter
+\renewcommand*\l@subsubsection{\@dottedtocline{3}{3em}{0em}}
+\makeatother
+
+\setlength\parindent{0pt}
+\setlength\parskip{2ex plus 0.5ex}
+
+\title{\#OpenSauce~\\~\\\large{\emph{Open-source sauce recipes}}}
+\author{Research Bazaar, Australia}
+\date{\today}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\topskip0pt
+\vspace*{\fill}
+\begin{quotation}
+
+\noindent \emph{At the first ever Research Bazaar, in Melbourne, 2015, delegates from around the world convened in order to teach and learn open-source digital research tools.}
+
+\emph{The event was a resounding success, with many future interdisciplinary colloborations planned. Key to its success was the daily provision of breakfasts, lunches, and sometimes, dinners. Despite attendee pleas, our fearless chef, \emph{Nic}, refused to divulge her secret recipes.}
+
+\emph{From passion for Open Knowledge and a shitty pun, \textbf{\#opensauce} was born \dots}
+
+\end{quotation}
+\thispagestyle{empty}
+
+\vspace*{\fill}
+
+\cleardoublepage
+\pagenumbering{arabic}
+\inputAllFiles{recipes}
+
+\tableofcontents
+\end{document}
