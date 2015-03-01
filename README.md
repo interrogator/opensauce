@@ -8,7 +8,7 @@
 
 ## To build
 
-If you want a nicely formatted, bleeding-edge version of the book, clone to repository and use your TeX builder to compile `sauce_book.tex`. If that's too much effort, a fairly recent PDF version will be kept [here](https://github.com/interrogator/opensauce/blob/master/sauce_book.pdf).
+If you want a nicely formatted, bleeding-edge version of the book, clone the repository and use your TeX builder to compile `sauce_book.tex`. If that's too much effort, a fairly recent PDF version will be kept [here](https://github.com/interrogator/opensauce/blob/master/sauce_book.pdf).
 
 ## To contribute
 
