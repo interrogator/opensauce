@@ -12,7 +12,7 @@ If you want a nicely formatted, bleeding-edge version of the book, clone to repo
 
 ## To contribute
 
-The easiest way is to make a pull request. Ideally, you'll want to create a LaTeX formatted file in `recipes/` that follows the syntax of existing entries (e.g. [`recipes/salsa.tex`](https://github.com/interrogator/opensauce/blob/master/recipes/salsa.tex)). Please feel free to add your name and affiliation to any contribution you make.
+The easiest way is to make a pull request. Ideally, you'll want to create a LaTeX formatted file in `recipes/` that follows the syntax of existing entries (e.g. [`recipes/mango_curry.tex`](https://github.com/interrogator/opensauce/blob/master/recipes/mango_curry.tex)). Please feel free to add your name and affiliation to any contribution you make.
 
 Upon compile, our main `sauce_book.tex` file will include all recipes included in `recipes/`.
 
