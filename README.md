@@ -2,7 +2,7 @@
 
 > At the first ever Research Bazaar, in Melbourne, 2015, delegates from around the world convened in order to teach and learn open-source digital research tools.
 
-> The event was a resounding success, with many future interdisciplinary colloborations planned. Key to its success was the daily provision of breakfasts, lunches, and sometimes, dinners. Despite attendee pleas, our fearless chef, *Nic*, refused to divulge her secret recipes.}
+> The event was a resounding success, with many future interdisciplinary colloborations planned. Key to its success was the daily provision of breakfasts, lunches, and sometimes, dinners. Despite attendee pleas, our fearless chef, *Nic*, refused to divulge her secret recipes.
 
 > From passion for Open Knowledge and a shitty pun, *opensauce* was born.
 
